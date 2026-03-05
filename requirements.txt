@@ -1,0 +1,7 @@
+google-generativeai
+pvporcupine
+openai-whisper
+pyttsx3
+python-dotenv
+pyaudio
+pyautogui

@@ -94,3 +94,61 @@ self.apps = {
 * [ ] **Multi-turn Conversation:** 이전 대화 문맥을 기억하는 메모리 기능 추가.
 * [ ] **GUI Dashboard:** 현재 상태 및 음성 인식 텍스트를 시각화하는 대시보드 개발.
 * [ ] **Custom Automation:** 특정 시간에 뉴스 요약이나 날씨 정보를 읽어주는 스케줄링 기능.
+
+
+
+
+
+
+
+
+classDiagram
+    class Config {
+        +String GEMINI_API_KEY
+        +String PICOVOICE_KEY
+        +String WAKE_WORD_PATH
+        +String MODEL_PATH
+        +validate()
+    }
+
+    class Listener {
+        -Porcupine porcupine
+        -PyAudio pa
+        -Stream audio_stream
+        +listen_for_wake_word() bool
+        +record_command(int seconds) String
+        +cleanup()
+    }
+
+    class Brain {
+        -WhisperModel stt_model
+        -GenAIClient client
+        -String model_id
+        -String system_prompt
+        +speech_to_text(String audio_path) String
+        +understand_intent(String text) Dictionary
+    }
+
+    class Executor {
+        -Dictionary apps
+        -String shortcut_folder
+        +load_apps()
+        +execute(Dictionary intent)
+    }
+
+    class Speaker {
+        -pyttsx3Engine engine
+        +say(String text)
+    }
+
+    class Main {
+        <<System Controller>>
+        +run()
+    }
+
+    Main --> Listener : uses
+    Main --> Brain : uses
+    Main --> Executor : uses
+    Main --> Speaker : uses
+    Listener ..> Config : depends on
+    Brain ..> Config : depends on

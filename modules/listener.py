@@ -51,7 +51,7 @@ class Listener:
         if self.porcupine is not None:
             self.porcupine.delete()
 
-    def record_command(self, seconds=5):
+    def record_command(self, seconds=6):
         """호출어 감지 후 사용자의 명령을 녹음하여 파일로 저장"""
         output_path = "command.wav"
         print(f"🎤 듣고 있습니다... ({seconds}초)")

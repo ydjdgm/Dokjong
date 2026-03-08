@@ -1,7 +1,7 @@
 from modules.listener import Listener
 from modules.brain import Brain
-from modules.executor import Executor # 추가
-from modules.speaker import Speaker   # 추가
+from modules.executor import Executor
+from modules.speaker import Speaker
 
 def main():
     listener = Listener()
@@ -9,13 +9,14 @@ def main():
     executor = Executor()
     speaker = Speaker()
     
-    speaker.say("독종 시스템이 가동되었습니다. 무엇을 도와드릴까요?")
+    speaker.say("독종이 시작되었습니다.")
 
     try:
         while True:
             if listener.listen_for_wake_word():
-                # 1. 녹음 (4초)
-                audio_file = listener.record_command(seconds=4)
+                # 1. 녹음 (6초)
+                speaker.say("네.")
+                audio_file = listener.record_command(seconds=6)
                 
                 # 2. 텍스트 변환
                 text = brain.speech_to_text(audio_file)

@@ -1,0 +1,44 @@
+{
+  "system_controls": [
+    {
+      "intent": "system_shutdown",
+      "expected_utterances": [
+        "컴퓨터 꺼줘",
+        "시스템 종료해",
+        "피씨 꺼",
+        "전원 꺼줘"
+      ],
+      "action": "execute_shutdown"
+    },
+    {
+      "intent": "discord_mute",
+      "expected_utterances": [
+        "디스코드 마이크 꺼",
+        "디코 음소거",
+        "마이크 음소거해줘",
+        "디코 마이크 꺼줘"
+      ],
+      "action": "execute_discord_mute"
+    },
+    {
+      "intent": "youtube_open",
+      "expected_utterances": ["유튜브 켜줘", "유튜브 실행해"],
+      "action": "execute_youtube_open"
+    },
+    {
+      "intent": "youtube_search",
+      "expected_utterances": ["유튜브 검색해", "유튜브에서 찾아줘"],
+      "action": "execute_youtube_search"
+    },
+    {
+      "intent": "youtube_play_target",
+      "expected_utterances": ["영상 틀어줘", "영상 재생해", "채널 틀어줘", "저거 틀어줘"],
+      "action": "execute_youtube_play_target"
+    },
+    {
+      "intent": "youtube_play_pause",
+      "expected_utterances": ["유튜브 멈춰", "유튜브 정지", "유튜브 재생해", "영상 멈춰", "영상 정지", "영상 재생해"],
+      "action": "execute_youtube_play_pause"
+    }
+  ]
+}

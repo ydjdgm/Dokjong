@@ -1,0 +1,934 @@
+2026-03-14 15:45:44 | INFO     | main.py:21 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 15:45:46 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 15:45:46 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 15:45:49 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 15:45:49 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 15:46:28 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 15:46:29 | ERROR    | wake_word.py:34 | 호출어 감지 모듈 초기화 실패: Initialization failed:
+  [0] b5abd58 00000066: Keyword file (.ppn) and model file (.pv) should belong to the same language. File belongs to `ko` while model file (.pv) belongs to `en`.
+2026-03-14 15:46:29 | CRITICAL | main.py:32 | 호출어 모듈 초기화 실패. 시스템을 종료합니다.
+2026-03-14 15:49:14 | INFO     | main.py:21 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 15:49:14 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 15:49:15 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 15:49:16 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 15:49:16 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 15:49:20 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 15:49:20 | ERROR    | wake_word.py:34 | 호출어 감지 모듈 초기화 실패: Initialization failed:
+  [0] b5abd58 00000066: Keyword file (.ppn) and model file (.pv) should belong to the same language. File belongs to `ko` while model file (.pv) belongs to `en`.
+2026-03-14 15:49:20 | CRITICAL | main.py:32 | 호출어 모듈 초기화 실패. 시스템을 종료합니다.
+2026-03-14 15:56:15 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 15:56:15 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 15:56:52 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 15:56:52 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 15:56:53 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 15:56:54 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 15:56:54 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 15:56:58 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 15:56:59 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 15:56:59 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 15:57:03 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 15:57:03 | INFO     | wake_word.py:45 | 호출어('독종아') 대기 중...
+2026-03-14 15:57:20 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 15:57:20 | INFO     | wake_word.py:69 | 호출어 감지 리소스 해제 완료
+2026-03-14 15:57:20 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 15:57:20 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 15:57:26 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 15:57:26 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 15:57:26 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 15:57:29 | INFO     | stt_engine.py:29 | STT 인식 결과: 안뇽 나의 소개하지 이러면 개망을 지금 트러블러
+2026-03-14 15:57:29 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '안뇽 나의 소개하지 이러면 개망을 지금 트러블러' -> discord_mute (Score: 0.37)
+2026-03-14 15:57:29 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 15:57:29 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 15:57:30 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 15:57:31 | INFO     | wake_word.py:45 | 호출어('독종아') 대기 중...
+2026-03-14 15:58:00 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 15:58:01 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 15:58:01 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 15:58:03 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 15:58:03 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 15:58:06 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 15:58:07 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 15:58:07 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 15:58:10 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 15:58:10 | INFO     | wake_word.py:45 | 호출어('독종아') 대기 중...
+2026-03-14 15:58:37 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 15:58:37 | INFO     | wake_word.py:69 | 호출어 감지 리소스 해제 완료
+2026-03-14 15:58:37 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 15:58:37 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 15:58:40 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 15:58:40 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 15:58:40 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 15:58:42 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 15:58:42 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜줘' -> youtube_play (Score: 0.92)
+2026-03-14 15:58:42 | INFO     | action_dispatcher.py:28 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 15:58:42 | INFO     | app_controller.py:19 | 유튜브 브라우저 실행
+2026-03-14 15:58:50 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 15:58:50 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 15:58:51 | INFO     | wake_word.py:45 | 호출어('독종아') 대기 중...
+2026-03-14 16:04:11 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 16:04:11 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 16:04:12 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 16:04:13 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 16:04:13 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 16:04:17 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 16:04:18 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 16:04:18 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 16:04:21 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 16:04:21 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:04:29 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:04:29 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:04:29 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:04:34 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:04:34 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:04:34 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:04:35 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 브라우즈에서 켜줘
+2026-03-14 16:04:36 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 브라우즈에서 켜줘' -> youtube_play (Score: 0.75)
+2026-03-14 16:04:36 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 16:04:36 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 16:04:36 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:04:37 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:04:40 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:04:40 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:04:41 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:04:45 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:04:45 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:04:45 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:04:46 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 브라우자에서 켜줘
+2026-03-14 16:04:46 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 브라우자에서 켜줘' -> youtube_play (Score: 0.74)
+2026-03-14 16:04:46 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 16:04:46 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 16:04:46 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:04:47 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:05:05 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:05:05 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:05:05 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:05:08 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:05:08 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:05:08 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:05:08 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 16:05:08 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜줘' -> youtube_play (Score: 0.92)
+2026-03-14 16:05:08 | INFO     | action_dispatcher.py:28 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 16:05:08 | INFO     | app_controller.py:19 | 유튜브 브라우저 실행
+2026-03-14 16:05:13 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 16:05:14 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:05:15 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:06:46 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:06:46 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:06:46 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:06:51 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:06:51 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:06:51 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:06:52 | INFO     | stt_engine.py:29 | STT 인식 결과: 브라우저에서 모두 수락 눌러줘
+2026-03-14 16:06:52 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '브라우저에서 모두 수락 눌러줘' -> youtube_play (Score: 0.40)
+2026-03-14 16:06:52 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 16:06:52 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 16:06:52 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:06:53 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:11:54 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:11:54 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:11:55 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:11:58 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:11:58 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:11:58 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:11:59 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 16:11:59 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜줘' -> youtube_play (Score: 0.92)
+2026-03-14 16:11:59 | INFO     | action_dispatcher.py:28 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 16:11:59 | INFO     | app_controller.py:19 | 유튜브 브라우저 실행
+2026-03-14 16:12:04 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 16:12:04 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:12:05 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:06 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:06 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:08 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:08 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:08 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:08 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:11 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:11 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:11 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:11 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:12 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:12 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:12 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:12 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:12 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:12 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:16 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:16 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:17 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:39 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:39 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:39 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:39 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:39 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:39 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:39 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:39 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:39 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:39 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:43 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:43 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:44 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:44 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:44 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:44 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:44 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:44 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:44 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:44 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:45 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:45 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:45 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:45 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:45 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:45 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:45 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:45 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:45 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:45 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:46 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:46 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:46 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:46 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:46 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:47 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:47 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:47 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:47 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:47 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:47 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:47 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:47 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:47 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:47 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:48 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:48 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:48 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:48 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:48 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:48 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:48 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:48 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:16:48 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:16:48 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:17:39 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 16:17:40 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 16:17:40 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 16:17:41 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 16:17:41 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 16:17:45 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 16:17:46 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 16:17:46 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 16:17:49 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 16:17:49 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:17:52 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:17:52 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:17:52 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:17:56 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:17:56 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:17:56 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:17:58 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 16:17:58 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜줘' -> youtube_play (Score: 0.92)
+2026-03-14 16:17:58 | INFO     | action_dispatcher.py:28 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 16:17:58 | INFO     | app_controller.py:21 | 유튜브 브라우저 실행
+2026-03-14 16:18:03 | INFO     | app_controller.py:45 | 유튜브 실행 완료. 최초 1회 로그인이 필요할 수 있습니다.
+2026-03-14 16:18:03 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 16:18:03 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:18:04 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:19:39 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:19:39 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:19:39 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:19:45 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:19:45 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:19:45 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:19:45 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 16:19:45 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜줘' -> youtube_play (Score: 0.92)
+2026-03-14 16:19:45 | INFO     | action_dispatcher.py:28 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 16:19:45 | INFO     | app_controller.py:21 | 유튜브 브라우저 실행
+2026-03-14 16:19:50 | INFO     | app_controller.py:45 | 유튜브 실행 완료. 최초 1회 로그인이 필요할 수 있습니다.
+2026-03-14 16:19:50 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 16:19:50 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:19:51 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:52:28 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:52:28 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:52:29 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:52:29 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:52:29 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:52:29 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:52:29 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:52:29 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:52:29 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:52:29 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:52:30 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:52:30 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:54:32 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 16:54:33 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 16:54:33 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 16:54:35 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 16:54:35 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 16:54:39 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 16:56:37 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 16:56:38 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 16:56:38 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 16:56:39 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 16:56:39 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 16:56:43 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 16:56:44 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 16:56:44 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 16:56:48 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 16:56:48 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:56:52 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:56:52 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:56:52 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:56:55 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:56:55 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:56:55 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:56:56 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜져
+2026-03-14 16:56:56 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜져' -> youtube_open (Score: 0.89)
+2026-03-14 16:56:56 | ERROR    | action_dispatcher.py:35 | 등록되지 않은 액션입니다: execute_youtube_open
+2026-03-14 16:56:56 | INFO     | tts_engine.py:26 | TTS 출력: 명령 실행 중 문제가 발생했습니다.
+2026-03-14 16:56:56 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:56:57 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:58:14 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:58:14 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:58:14 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 16:58:14 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:58:55 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 16:58:55 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 16:58:56 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 16:58:57 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 16:58:57 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 16:59:01 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 16:59:02 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 16:59:02 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 16:59:05 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 16:59:05 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:59:08 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:59:08 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:59:08 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:59:11 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:59:11 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:59:11 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:59:12 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜주원
+2026-03-14 16:59:12 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜주원' -> youtube_open (Score: 0.76)
+2026-03-14 16:59:12 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 16:59:12 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 16:59:12 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:59:13 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 16:59:45 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 16:59:45 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 16:59:45 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 16:59:51 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 16:59:51 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 16:59:51 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 16:59:52 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜주오
+2026-03-14 16:59:52 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜주오' -> youtube_open (Score: 0.85)
+2026-03-14 16:59:52 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-14 16:59:52 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-14 16:59:57 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 16:59:58 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 16:59:59 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:00:24 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:00:24 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:00:24 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:00:30 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:00:30 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:00:30 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:00:30 | INFO     | stt_engine.py:29 | STT 인식 결과: 클립 메호가 영상 틀어줘
+2026-03-14 17:00:30 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '클립 메호가 영상 틀어줘' -> youtube_play_target (Score: 0.58)
+2026-03-14 17:00:30 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:00:30 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:00:30 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:00:31 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:01:19 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:01:19 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:01:19 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:01:23 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:01:23 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:01:23 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:01:24 | INFO     | stt_engine.py:29 | STT 인식 결과: 가장 위에 있는 영상 틀어줘
+2026-03-14 17:01:24 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '가장 위에 있는 영상 틀어줘' -> youtube_play_target (Score: 0.70)
+2026-03-14 17:01:24 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:01:24 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:01:24 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:01:25 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:01:31 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:01:31 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:01:31 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:01:39 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:01:39 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:01:39 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:01:39 | INFO     | stt_engine.py:29 | STT 인식 결과: 다운디 영상 들어줘
+2026-03-14 17:01:39 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '다운디 영상 들어줘' -> youtube_play_target (Score: 0.54)
+2026-03-14 17:01:39 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:01:39 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:01:40 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:01:41 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:02:45 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:02:45 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:02:45 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:02:50 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:02:50 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:02:50 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:02:51 | INFO     | stt_engine.py:29 | STT 인식 결과: 침착맨 영상 들어줘
+2026-03-14 17:02:51 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '침착맨 영상 들어줘' -> youtube_play_target (Score: 0.71)
+2026-03-14 17:02:51 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:02:51 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:02:51 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:02:52 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:03:29 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:03:29 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:03:29 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:03:35 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:03:35 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:03:35 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:03:35 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브에서 심창맨 검색해줘
+2026-03-14 17:03:36 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브에서 심창맨 검색해줘' -> youtube_search (Score: 0.57)
+2026-03-14 17:03:36 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:03:36 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:03:36 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:03:37 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:03:40 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:03:40 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:03:40 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:03:42 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:03:42 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:03:42 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:03:43 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 검색해
+2026-03-14 17:03:43 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 검색해' -> youtube_search (Score: 1.00)
+2026-03-14 17:03:43 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 17:03:43 | WARNING  | app_controller.py:53 | 검색할 키워드가 추출되지 않았습니다.
+2026-03-14 17:03:43 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:03:43 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:03:44 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:05:05 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:05:05 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:05:05 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:05:10 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:05:10 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:05:10 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:05:10 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 저거 멈춰줘
+2026-03-14 17:05:10 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 저거 멈춰줘' -> youtube_play_pause (Score: 0.88)
+2026-03-14 17:05:10 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_pause
+2026-03-14 17:05:10 | INFO     | app_controller.py:126 | 유튜브 재생/일시정지 토글
+2026-03-14 17:05:10 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:05:11 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:05:12 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:05:15 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:05:15 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:05:15 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:05:18 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:05:18 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:05:18 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:05:19 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 멈춰줘
+2026-03-14 17:05:19 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 멈춰줘' -> youtube_play_pause (Score: 0.93)
+2026-03-14 17:05:19 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_pause
+2026-03-14 17:05:19 | INFO     | app_controller.py:126 | 유튜브 재생/일시정지 토글
+2026-03-14 17:05:19 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:05:19 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:05:20 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:05:30 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:05:30 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:05:30 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:05:33 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:05:33 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:05:33 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:05:34 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 멈췄죠
+2026-03-14 17:05:34 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 멈췄죠' -> youtube_play_pause (Score: 0.73)
+2026-03-14 17:05:34 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:05:34 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:05:34 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:05:35 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:05:40 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:05:40 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:05:40 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:05:44 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:05:44 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:05:44 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:05:44 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 맘 쳐줘
+2026-03-14 17:05:45 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 맘 쳐줘' -> youtube_open (Score: 0.65)
+2026-03-14 17:05:45 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:05:45 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:05:45 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:05:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:05:48 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:05:48 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:05:48 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:05:52 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:05:52 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:05:52 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:05:52 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 멈춰
+2026-03-14 17:05:52 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 멈춰' -> youtube_play_pause (Score: 1.00)
+2026-03-14 17:05:52 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_pause
+2026-03-14 17:05:52 | INFO     | app_controller.py:126 | 유튜브 재생/일시정지 토글
+2026-03-14 17:05:52 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:05:52 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:05:53 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:05:57 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:05:57 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:05:57 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:06:04 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:06:04 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:06:04 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:06:05 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 세상에
+2026-03-14 17:06:05 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 세상에' -> youtube_open (Score: 0.57)
+2026-03-14 17:06:05 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.8) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:06:05 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:06:05 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:06:06 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:06:10 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:06:10 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:06:10 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:06:15 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:06:15 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:06:15 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:06:15 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 재생해
+2026-03-14 17:06:15 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 재생해' -> youtube_play_pause (Score: 1.00)
+2026-03-14 17:06:15 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_pause
+2026-03-14 17:06:15 | INFO     | app_controller.py:126 | 유튜브 재생/일시정지 토글
+2026-03-14 17:06:15 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:06:16 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:06:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:09:50 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:09:50 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:09:50 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:09:53 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:09:53 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:09:53 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:09:54 | INFO     | stt_engine.py:29 | STT 인식 결과: 그럼 유튜브 켜줘.
+2026-03-14 17:09:54 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '그럼 유튜브 켜줘.' -> youtube_open (Score: 0.88)
+2026-03-14 17:09:54 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-14 17:09:54 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-14 17:09:54 | CRITICAL | main.py:77 | 시스템 실행 중 치명적인 오류 발생: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=145.0.7632.160); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7ccb7aa55
+	0x7ff7cc8d8630
+	0x7ff7cc66d75d
+	0x7ff7cc658c72
+	0x7ff7cc67f015
+	0x7ff7cc6f90e0
+	0x7ff7cc715282
+	0x7ff7cc6b9098
+	0x7ff7cc6b9f83
+	0x7ff7ccba7810
+	0x7ff7ccba1afd
+	0x7ff7ccbc2c1a
+	0x7ff7cc8f3345
+	0x7ff7cc8fb81c
+	0x7ff7cc8e1924
+	0x7ff7cc8e1ad6
+	0x7ff7cc8c7e47
+	0x7ff9a1e3e8d7
+	0x7ff9a376c48c
+
+2026-03-14 17:09:54 | INFO     | wake_word.py:67 | 호출어 감지 리소스 해제 완료
+2026-03-14 17:09:54 | INFO     | main.py:81 | === 독종 시스템이 안전하게 종료되었습니다. ===
+2026-03-14 17:10:25 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 17:10:25 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 17:10:25 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 17:10:27 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 17:10:27 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 17:10:31 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 17:10:32 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 17:10:32 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 17:10:36 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 17:10:36 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:10:40 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:10:40 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:10:40 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:10:42 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:10:42 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:10:42 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:10:43 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 17:10:43 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 켜줘' -> youtube_open (Score: 1.00)
+2026-03-14 17:10:43 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-14 17:10:43 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-14 17:10:49 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:10:49 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:10:50 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:11:18 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:11:18 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:11:18 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:11:21 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:11:21 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:11:21 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:11:21 | INFO     | stt_engine.py:29 | STT 인식 결과: 영상 멈춰줘
+2026-03-14 17:11:21 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '영상 멈춰줘' -> youtube_play_target (Score: 0.67)
+2026-03-14 17:11:21 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.7) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:11:21 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:11:21 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:11:22 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:11:24 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:11:24 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:11:24 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:11:28 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:11:28 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:11:28 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:11:28 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브에 멈춰줘
+2026-03-14 17:11:28 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브에 멈춰줘' -> youtube_play_pause (Score: 0.78)
+2026-03-14 17:11:28 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_pause
+2026-03-14 17:11:28 | INFO     | app_controller.py:126 | 유튜브 재생/일시정지 토글
+2026-03-14 17:11:28 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:11:29 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:11:30 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:11:35 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:11:35 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:11:35 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:11:38 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:11:38 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:11:38 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:11:39 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 다시 시청해주세요
+2026-03-14 17:11:39 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 다시 시청해주세요' -> youtube_play_pause (Score: 0.59)
+2026-03-14 17:11:39 | WARNING  | intent_analyzer.py:90 | 유효 임계치(0.7) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:11:39 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:11:39 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:11:40 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:11:41 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:11:41 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:11:41 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:11:44 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:11:45 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:11:45 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:11:45 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 재생해
+2026-03-14 17:11:45 | INFO     | intent_analyzer.py:80 | 의도 추론 결과: '유튜브 재생해' -> youtube_play_pause (Score: 1.00)
+2026-03-14 17:11:45 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_pause
+2026-03-14 17:11:45 | INFO     | app_controller.py:126 | 유튜브 재생/일시정지 토글
+2026-03-14 17:11:45 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:11:45 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:11:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:20:22 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 17:20:22 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:20:55 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 17:20:56 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 17:20:56 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 17:20:58 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 17:20:58 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 17:21:01 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 17:21:02 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 17:21:02 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 17:21:06 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 17:21:06 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:25:32 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:25:32 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:25:32 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:25:36 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:25:36 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:25:36 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:25:37 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 17:25:37 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '유튜브 켜줘' -> youtube_open (Score: 1.00)
+2026-03-14 17:25:37 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-14 17:25:37 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-14 17:25:42 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:25:42 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:25:43 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:25:49 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:25:49 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:25:50 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:25:53 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:25:53 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:25:53 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:25:54 | INFO     | stt_engine.py:29 | STT 인식 결과: 오리고기 영상 틀어줘
+2026-03-14 17:25:54 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '오리고기 영상 틀어줘' -> youtube_play_target (Score: 0.82)
+2026-03-14 17:25:54 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-14 17:25:54 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 오리고기
+2026-03-14 17:25:57 | WARNING  | app_controller.py:121 | 화면에서 일치하는 영상을 찾지 못했습니다.
+2026-03-14 17:25:57 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:25:57 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:25:58 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:26:08 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:26:08 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:26:08 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:26:13 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:26:13 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:26:13 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:26:14 | INFO     | stt_engine.py:29 | STT 인식 결과: 첫번째 영상 들어줘
+2026-03-14 17:26:14 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '첫번째 영상 들어줘' -> youtube_play_target (Score: 0.58)
+2026-03-14 17:26:14 | WARNING  | intent_analyzer.py:100 | 유효 임계치(0.7) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:26:14 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:26:14 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:26:15 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:26:21 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:26:21 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:26:21 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:26:25 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:26:25 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:26:25 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:26:26 | INFO     | stt_engine.py:29 | STT 인식 결과: 우리 고기 영상 틀어줘
+2026-03-14 17:26:26 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '우리 고기 영상 틀어줘' -> youtube_play_target (Score: 0.84)
+2026-03-14 17:26:26 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-14 17:26:26 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 우리 고기
+2026-03-14 17:26:28 | INFO     | app_controller.py:118 | 가장 유사한 영상 클릭 (Score: 0.20)
+2026-03-14 17:26:29 | ERROR    | app_controller.py:123 | 영상 타겟팅 재생 중 오류 발생: Message: element not interactable
+  (Session info: chrome=145.0.7632.160); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7ccb7aa55
+	0x7ff7cc8d8630
+	0x7ff7cc66d546
+	0x7ff7cc6c9bd4
+	0x7ff7cc6bb426
+	0x7ff7cc6f19da
+	0x7ff7cc6baca6
+	0x7ff7cc71591c
+	0x7ff7cc6b9098
+	0x7ff7cc6b9f83
+	0x7ff7ccba7810
+	0x7ff7ccba1afd
+	0x7ff7ccbc2c1a
+	0x7ff7cc8f3345
+	0x7ff7cc8fb81c
+	0x7ff7cc8e1924
+	0x7ff7cc8e1ad6
+	0x7ff7cc8c7e47
+	0x7ff9a1e3e8d7
+	0x7ff9a376c48c
+
+2026-03-14 17:26:29 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:26:29 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:26:30 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:27:17 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:27:17 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:27:17 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:27:19 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:27:19 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:27:19 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:27:20 | INFO     | stt_engine.py:29 | STT 인식 결과: 
+2026-03-14 17:27:20 | WARNING  | main.py:69 | 음성이 텍스트로 변환되지 않았습니다.
+2026-03-14 17:27:20 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:27:21 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:27:24 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:27:24 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:27:24 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:27:32 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:27:32 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:27:32 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:27:33 | INFO     | stt_engine.py:29 | STT 인식 결과: 살면서 처음 보는 유형의 버티버 영상 들어줘
+2026-03-14 17:27:33 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '살면서 처음 보는 유형의 버티버 영상 들어줘' -> youtube_play_target (Score: 0.53)
+2026-03-14 17:27:33 | WARNING  | intent_analyzer.py:100 | 유효 임계치(0.7) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:27:33 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:27:33 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:27:34 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:28:40 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 17:28:40 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:28:40 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-14 17:28:40 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:29:07 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 17:29:07 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 17:29:07 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 17:29:09 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 17:29:09 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 17:29:13 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 17:29:14 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 17:29:14 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 17:29:17 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 17:29:17 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:29:36 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:29:36 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:29:36 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:29:39 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:29:39 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:29:39 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:29:40 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-14 17:29:40 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '유튜브 켜줘' -> youtube_open (Score: 1.00)
+2026-03-14 17:29:40 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-14 17:29:40 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-14 17:29:45 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:29:45 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:29:46 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:29:48 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:29:48 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:29:48 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:29:52 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:29:52 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:29:52 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:29:52 | INFO     | stt_engine.py:29 | STT 인식 결과: 슈카울드 영상 들어줘
+2026-03-14 17:29:52 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '슈카울드 영상 들어줘' -> youtube_play_target (Score: 0.52)
+2026-03-14 17:29:52 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-14 17:29:52 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 슈카울드
+2026-03-14 17:29:55 | WARNING  | app_controller.py:121 | 화면에서 일치하는 영상을 찾지 못했습니다.
+2026-03-14 17:29:55 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:29:55 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:29:56 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:29:59 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:29:59 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:29:59 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:30:04 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:30:04 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:30:04 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:30:04 | INFO     | stt_engine.py:29 | STT 인식 결과: 슈카 월드 영상 들어줘
+2026-03-14 17:30:04 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '슈카 월드 영상 들어줘' -> youtube_play_target (Score: 0.54)
+2026-03-14 17:30:04 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-14 17:30:04 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 슈카 월드
+2026-03-14 17:30:07 | INFO     | app_controller.py:118 | 가장 유사한 영상 클릭 (Score: 0.20)
+2026-03-14 17:30:07 | ERROR    | app_controller.py:123 | 영상 타겟팅 재생 중 오류 발생: Message: element not interactable
+  (Session info: chrome=145.0.7632.160); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementnotinteractableexception
+Stacktrace:
+Symbols not available. Dumping unresolved backtrace:
+	0x7ff7ccb7aa55
+	0x7ff7cc8d8630
+	0x7ff7cc66d546
+	0x7ff7cc6c9bd4
+	0x7ff7cc6bb426
+	0x7ff7cc6f19da
+	0x7ff7cc6baca6
+	0x7ff7cc71591c
+	0x7ff7cc6b9098
+	0x7ff7cc6b9f83
+	0x7ff7ccba7810
+	0x7ff7ccba1afd
+	0x7ff7ccbc2c1a
+	0x7ff7cc8f3345
+	0x7ff7cc8fb81c
+	0x7ff7cc8e1924
+	0x7ff7cc8e1ad6
+	0x7ff7cc8c7e47
+	0x7ff9a1e3e8d7
+	0x7ff9a376c48c
+
+2026-03-14 17:30:07 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:30:07 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:30:08 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:33:17 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-14 17:33:18 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-14 17:33:18 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-14 17:33:20 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-14 17:33:20 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-14 17:33:23 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-14 17:33:24 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-14 17:33:24 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-14 17:33:28 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-14 17:33:28 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:33:34 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:33:34 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:33:34 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:33:36 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:33:36 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:33:36 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:33:39 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜 Grove Calm I need an email don't miss it but if you like this video, please subscribe and like don't forget to subscribe and remember to subscribe
+2026-03-14 17:33:39 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '유튜브 켜 Grove Calm I need an email don't miss it but if you like this video, please subscribe and like don't forget to subscribe and remember to subscribe' -> youtube_open (Score: 0.26)
+2026-03-14 17:33:39 | WARNING  | intent_analyzer.py:100 | 유효 임계치(0.5) 도달 실패. 일치하는 명령어를 찾지 못했습니다.
+2026-03-14 17:33:39 | INFO     | tts_engine.py:26 | TTS 출력: 무슨 말씀인지 잘 이해하지 못했어요.
+2026-03-14 17:33:39 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:33:40 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:33:54 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:33:54 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:33:54 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:33:58 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:33:58 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:33:58 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:33:58 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜고 줘
+2026-03-14 17:33:58 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '유튜브 켜고 줘' -> youtube_open (Score: 0.84)
+2026-03-14 17:33:58 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-14 17:33:58 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-14 17:34:03 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:34:03 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:34:04 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:34:08 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:34:08 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:34:09 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:34:13 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:34:13 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:34:13 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:34:14 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브에서 판다 영상 들어줘
+2026-03-14 17:34:14 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '유튜브에서 판다 영상 들어줘' -> youtube_search (Score: 0.63)
+2026-03-14 17:34:14 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_search
+2026-03-14 17:34:14 | INFO     | app_controller.py:56 | 유튜브 검색 실행: 판다
+2026-03-14 17:34:14 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:34:15 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:34:16 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-14 17:34:22 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-14 17:34:22 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-14 17:34:23 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-14 17:34:27 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-14 17:34:27 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-14 17:34:27 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-14 17:34:28 | INFO     | stt_engine.py:29 | STT 인식 결과: 얼스의 좋다 영상 틀어줘
+2026-03-14 17:34:28 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '얼스의 좋다 영상 틀어줘' -> youtube_play_target (Score: 0.77)
+2026-03-14 17:34:28 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-14 17:34:28 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 얼스의 좋다
+2026-03-14 17:34:31 | INFO     | app_controller.py:118 | 가장 유사한 영상 클릭 (Score: 0.17)
+2026-03-14 17:34:32 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-14 17:34:32 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-14 17:34:33 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-16 06:54:23 | INFO     | main.py:22 | === 프로젝트 '독종' 시스템 초기화 시작 ===
+2026-03-16 06:54:24 | INFO     | tts_engine.py:20 | TTS 엔진 초기화 성공
+2026-03-16 06:54:25 | INFO     | stt_engine.py:12 | Whisper 모델(base) 로드 중... (초기 1회 시간 소요)
+2026-03-16 06:54:27 | INFO     | stt_engine.py:15 | Whisper 모델 로드 완료
+2026-03-16 06:54:27 | INFO     | intent_analyzer.py:12 | S-BERT 모델(snunlp/KR-SBERT-V40K-klueNLI-augSTS) 로드 중...
+2026-03-16 06:54:32 | INFO     | intent_analyzer.py:15 | S-BERT 모델 로드 완료
+2026-03-16 06:54:35 | INFO     | wake_word.py:33 | 호출어 감지 모듈 초기화 완료
+2026-03-16 06:54:35 | INFO     | tts_engine.py:26 | TTS 출력: 독종 시스템이 준비되었습니다.
+2026-03-16 06:54:38 | INFO     | main.py:37 | === 시스템 초기화 완료. 호출어 대기 모드 진입 ===
+2026-03-16 06:54:38 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-16 06:55:21 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-16 06:55:21 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-16 06:55:21 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-16 06:55:24 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-16 06:55:24 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-16 06:55:24 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-16 06:55:27 | INFO     | stt_engine.py:29 | STT 인식 결과: 유튜브 켜줘
+2026-03-16 06:55:27 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '유튜브 켜줘' -> youtube_open (Score: 1.00)
+2026-03-16 06:55:27 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_open
+2026-03-16 06:55:27 | INFO     | app_controller.py:46 | 유튜브 기본 브라우저 실행
+2026-03-16 06:55:34 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-16 06:55:34 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-16 06:55:35 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-16 06:55:48 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-16 06:55:48 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-16 06:55:48 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-16 06:55:53 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-16 06:55:53 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-16 06:55:53 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-16 06:55:53 | INFO     | stt_engine.py:29 | STT 인식 결과: 길인 영상 들어줘
+2026-03-16 06:55:53 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '길인 영상 들어줘' -> youtube_play_target (Score: 0.60)
+2026-03-16 06:55:53 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-16 06:55:53 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 길인
+2026-03-16 06:55:56 | WARNING  | app_controller.py:123 | 화면에서 일치하는 영상을 찾지 못했습니다.
+2026-03-16 06:55:56 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-16 06:55:56 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-16 06:55:57 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-16 06:56:07 | INFO     | wake_word.py:53 | 호출어 감지됨!
+2026-03-16 06:56:07 | INFO     | tts_engine.py:26 | TTS 출력: 네, 말씀하세요.
+2026-03-16 06:56:07 | INFO     | vad_recorder.py:25 | 발화 대기 및 녹음 시작...
+2026-03-16 06:56:12 | INFO     | vad_recorder.py:46 | 묵음 감지됨. 녹음 종료.
+2026-03-16 06:56:12 | INFO     | vad_recorder.py:66 | 임시 오디오 저장 완료: temp_command.wav
+2026-03-16 06:56:12 | INFO     | stt_engine.py:24 | 음성 인식 분석 시작: temp_command.wav
+2026-03-16 06:56:12 | INFO     | stt_engine.py:29 | STT 인식 결과: 길인 영상 틀어줘
+2026-03-16 06:56:12 | INFO     | intent_analyzer.py:90 | 의도 추론 결과: '길인 영상 틀어줘' -> youtube_play_target (Score: 1.00)
+2026-03-16 06:56:12 | INFO     | action_dispatcher.py:31 | 액션 매핑 성공 및 실행: execute_youtube_play_target
+2026-03-16 06:56:12 | INFO     | app_controller.py:77 | 유튜브 타겟 영상 탐색 및 재생: 길인
+2026-03-16 06:56:15 | WARNING  | app_controller.py:123 | 화면에서 일치하는 영상을 찾지 못했습니다.
+2026-03-16 06:56:15 | INFO     | tts_engine.py:26 | TTS 출력: 명령을 수행했습니다.
+2026-03-16 06:56:15 | INFO     | main.py:71 | 명령 처리 완료. 다시 호출어 대기 모드로 돌아갑니다.
+2026-03-16 06:56:16 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-16 07:07:42 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-16 07:07:42 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
+2026-03-16 07:07:54 | INFO     | wake_word.py:56 | 호출어 대기 중단
+2026-03-16 07:07:54 | INFO     | wake_word.py:45 | 호출어('독종') 대기 중...
